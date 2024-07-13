@@ -33,7 +33,7 @@ map("n", "<C-r>r", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" 
 -- buffer management
 map("n", "<tab>", "<cmd>bnext<CR>", { desc = "move to next buffer" })
 map("n", "<S-tab>", "<cmd>bprev<CR>", { desc = "move to prev buffer" })
-map("n", "<leader>x", "<cmd>bd|bnext<CR>", { desc = "close the current active buffer" })
+map("n", "<leader>x", "<cmd>bd|bprev<CR>", { desc = "close the current active buffer" })
 
 -- lsp key bindings
 map("n", "K", vim.lsp.buf.hover, {})
