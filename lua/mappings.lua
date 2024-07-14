@@ -36,12 +36,12 @@ map("n", "<S-tab>", "<cmd>bprev<CR>", { desc = "move to prev buffer" })
 map("n", "<leader>x", "<cmd>bd|bprev<CR>", { desc = "close the current active buffer" })
 
 -- lsp key bindings
-map("n", "K", vim.lsp.buf.hover, {})
-map("n", "<leader>gd", vim.lsp.buf.definition, {})
-map("n", "<leader>gr", vim.lsp.buf.references, {})
-map("n", "<leader>ca", vim.lsp.buf.code_action, {})
-map("n", "<leader>rn", vim.lsp.buf.code_action, {})
-map('n', '<space>rn', vim.lsp.buf.rename, {})
+map("n", "K", vim.lsp.buf.hover, {desc="lsp hover info"})
+map("n", "<leader>gd", vim.lsp.buf.definition, {desc = "lsp go to definition"})
+map("n", "<leader>gr", vim.lsp.buf.references, {desc = "lsp references"})
+map("n", "<leader>ca", vim.lsp.buf.code_action, {desc = "lsp code action"})
+map("n", "<leader>rn", vim.lsp.buf.code_action, {desc = "lsp code action rename"})
+map('n', '<space>rn', vim.lsp.buf.rename, {desc = "lsp code action rename"})
 
 --formatting
 map("n", "<leader>fm", vim.lsp.buf.format, {})
