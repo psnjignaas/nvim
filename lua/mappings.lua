@@ -1,5 +1,10 @@
 local map = vim.keymap.set
 
+-- keybinding to close and save the buffers 
+map("i","<C-s>","<cmd>w|stopinsert<cr>",{desc="save file in insert mode"})
+map("n","<C-s>","<cmd>w<cr>",{desc="save file in normal mode"})
+map("n","<leader>qa","<cmd>qa<cr>",{desc="quit all buffers in normal mode"})
+
 -- movement keys in insert mode
 map("i", "<C-h>", "<Left>", { desc = "move left" })
 map("i", "<C-l>", "<Right>", { desc = "move right" })
