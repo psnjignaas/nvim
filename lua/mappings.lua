@@ -36,12 +36,12 @@ map("n", "<S-tab>", "<cmd>bprev<CR>", { desc = "move to prev buffer" })
 map("n", "<leader>x", "<cmd>bd|bprev<CR>", { desc = "close the current active buffer" })
 
 -- lsp key bindings
-map("n", "K", vim.lsp.buf.hover, {desc="lsp hover info"})
-map("n", "<leader>gd", vim.lsp.buf.definition, {desc = "lsp go to definition"})
-map("n", "<leader>gr", vim.lsp.buf.references, {desc = "lsp references"})
-map("n", "<leader>ca", vim.lsp.buf.code_action, {desc = "lsp code action"})
-map("n", "<leader>rn", vim.lsp.buf.code_action, {desc = "lsp code action rename"})
-map('n', '<space>rn', vim.lsp.buf.rename, {desc = "lsp code action rename"})
+map("n", "K", vim.lsp.buf.hover, { desc = "lsp hover info" })
+map("n", "<leader>gd", vim.lsp.buf.definition, { desc = "lsp go to definition" })
+map("n", "<leader>gr", vim.lsp.buf.references, { desc = "lsp references" })
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "lsp code action" })
+map("n", "<leader>rn", vim.lsp.buf.code_action, { desc = "lsp code action rename" })
+map('n', '<space>rn', vim.lsp.buf.rename, { desc = "lsp code action rename" })
 
 --formatting
 map("n", "<leader>fm", vim.lsp.buf.format, {})
@@ -73,6 +73,10 @@ map({ "n", "t" }, "<A-i>", function()
 	require("nvterm.terminal").toggle('float')
 end, { desc = "terminal toggle floating term" })
 
+-- git diff (vim-fugutive) key bindings
+map("n", "<leader>gvd","<cmd>Gvdiffsplit<cr>" ,{ desc = "View git diff in a vsplit" })
+
+
 -- code completion mappings are in plugins/completions.lua
 
 -- debugger mappings are in plugins/debugger.lua
@@ -84,4 +88,3 @@ end, { desc = "terminal toggle floating term" })
 -- map( "<leader>td", "<cmd>Trouble diagnostics toggle<CR>", {desc = "Open trouble document diagnostics"})
 -- map( "<leader>tq", "<cmd>Trouble diagnostics toggle<CR>", {desc = "Open trouble workspace diagnostics"} )
 -- map( "<leader>tl", "<cmd>Trouble loclist toggle<CR>", {desc = "Open trouble location list"} )
-
