@@ -49,6 +49,10 @@ return {
 				capabilities = capabilities,
 				filetypes = { 'python' }
 			})
+			lspconfig.dockerls.setup({
+				capabilities = capabilities,
+				filetypes = { 'dockerfile' }
+			})
 		end,
 	},
 	{
