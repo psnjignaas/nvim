@@ -53,22 +53,25 @@ return {
 				capabilities = capabilities,
 				filetypes = { 'dockerfile' }
 			})
+			lspconfig.rust_analyzer.setup({
+				capabilities = capabilities,
+			})
 		end,
 	},
-	{
-		"mrcjkb/rustaceanvim",
-		version = "^4",
-		ft = { "rust" },
-		dependencies = "hrsh7th/cmp-nvim-lsp",
-		config = function()
-			local capabilities = require('cmp_nvim_lsp').default_capabilities()
-			vim.g.rustaceanvim = {
-				server = {
-					capabilities = capabilities
-				}
-			}
-		end
-	},
+	-- {
+	-- 	"mrcjkb/rustaceanvim",
+	-- 	version = "^4",
+	-- 	ft = { "rust" },
+	-- 	dependencies = "hrsh7th/cmp-nvim-lsp",
+	-- 	config = function()
+	-- 		local capabilities = require('cmp_nvim_lsp').default_capabilities()
+	-- 		vim.g.rustaceanvim = {
+	-- 			server = {
+	-- 				capabilities = capabilities
+	-- 			}
+	-- 		}
+	-- 	end
+	-- },
 	{
 		'saecki/crates.nvim',
 		ft = { "rust", "toml" },
