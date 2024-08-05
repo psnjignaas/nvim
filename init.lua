@@ -7,7 +7,7 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set whichwrap+=<,>,h,l")
 vim.cmd("set ignorecase")
 vim.cmd("set noshowmode")
-
+vim.cmd("set clipboard=unnamedplus")
 
 -- lazy plugin manager
 
