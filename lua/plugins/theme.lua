@@ -1,11 +1,20 @@
 -- github-nvim-theme
+-- return {
+-- 	"projekt0n/github-nvim-theme",
+-- 	lazy = false,
+-- 	name = "github-nvim-theme",
+-- 	priority = 1000,
+-- 	config = function()
+-- 		vim.cmd.colorscheme "github_dark_default"
+-- 	end
+-- }
 return {
-	"projekt0n/github-nvim-theme",
+	"mofiqul/vscode.nvim",
 	lazy = false,
-	name = "github-nvim-theme",
+	name = "vscode-theme",
 	priority = 1000,
 	config = function()
-		vim.cmd.colorscheme "github_dark_default"
+		vim.cmd.colorscheme "vscode"
 	end
 }
 
