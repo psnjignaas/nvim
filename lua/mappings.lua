@@ -1,5 +1,8 @@
 local map = vim.keymap.set
 
+map("n","<leader>fp","<cmd>echo expand('%p')<cr>",{desc="Show complete file path"})
+vim.opt.timeoutlen = 300
+vim.keymap.set('i', 'jj', '<Esc>', { noremap = true, silent = true })
 -- keybinding to close and save the buffers 
 map("i","<C-s>","<cmd>w|stopinsert<cr>",{desc="save file in insert mode"})
 map("n","<C-s>","<cmd>w<cr>",{desc="save file in normal mode"})
@@ -16,6 +19,12 @@ map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
 map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
 map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
+
+--Terminal mode buffer switch
+map("t", "<C-h>", "<C-\\><C-n><C-w>h", { desc = "switch window left",silent = true })
+map("t", "<C-l>", "<C-\\><C-n><C-w>l", { desc = "switch window right",silent = true })
+map("t", "<C-j>", "<C-\\><C-n><C-w>j", { desc = "switch window down",silent = true })
+map("t", "<C-k>", "<C-\\><C-n><C-w>k", { desc = "switch window up",silent = true })
 
 -- telescope
 map("n", "<leader>fw", "<cmd>Telescope live_grep<CR>", { desc = "telescope live grep" })
